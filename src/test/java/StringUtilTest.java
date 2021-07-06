@@ -2,11 +2,9 @@ import static org.junit.Assert.*;
 
 public class StringUtilTest {
     public static void main(String[] args) {
-        String result = StringUtil.repeat("hello", 3);
-        assertEquals(result, "hellohellohello");
+        assertEquals(StringUtil.repeat("hello", 3), "hellohellohello");
 
-        String result2 = StringUtil.repeat("hello", 1);
-        assertEquals(result2, "hello");
+        assertEquals(StringUtil.repeat("hello", 1), "hello");
     }
 
     private static void assertEquals(String current, String expected){
