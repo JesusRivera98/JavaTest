@@ -14,7 +14,7 @@ public class PriceCalculator {
         for (Double price : prices) {
             result += price;
         }
-        return result * (discount/100.0);
+        return result * (1-(discount/100.0));
     }
 
     public void addPrice(double price) {
