@@ -13,6 +13,8 @@ public class FizzBuzzTest {
         assertEquals(FizzBuzz.fizzBuzz(5), "Buzz");
     }
 
+    @Test
     public void fizzBuzz_in_divisible_by_3_and_5() {
+        assertEquals(FizzBuzz.fizzBuzz(15), "FizzBuzz");
     }
 }
