@@ -17,4 +17,9 @@ public class FizzBuzzTest {
     public void fizzBuzz_in_divisible_by_3_and_5() {
         assertEquals(FizzBuzz.fizzBuzz(15), "FizzBuzz");
     }
+
+    @Test
+    public void n_in_not_divisible_by_3_or_5() {
+        assertEquals(FizzBuzz.fizzBuzz(7), "7");
+    }
 }

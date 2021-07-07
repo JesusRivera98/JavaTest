@@ -6,9 +6,11 @@ public class FizzBuzz {
                 return "FizzBuzz";
             }
             return "Fizz";
-        }else {
+        }
+        if (n % 5 == 0){
             return "Buzz";
         }
+        return ""+n;
 
     }
 }
