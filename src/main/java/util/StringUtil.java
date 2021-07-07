@@ -2,7 +2,6 @@ package util;
 
 public class StringUtil {
     public static void main(String[] args) {
-
     }
     public static String repeat(String str, int times){
         String result = "";
@@ -15,5 +14,12 @@ public class StringUtil {
             result += str;
         }
         return result;
+    }
+
+    public static boolean isEmpty(String str){
+        if (str == null){
+            return true;
+        }
+        return str.isBlank();
     }
 }
