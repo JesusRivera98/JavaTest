@@ -31,7 +31,8 @@ public class MovieServiceShould {
                         new Movie(4, "Super 8", 112, Genre.THRILLER),
                         new Movie(5, "Scream", 111, Genre.HORROR),
                         new Movie(6, "Home Alone", 103, Genre.COMEDY),
-                        new Movie(7, "Matrix", 136, Genre.ACTION)
+                        new Movie(7, "Matrix", 136, Genre.ACTION),
+                        new Movie(8, "Superman", 188, Genre.ACTION)
                 )
         );
 
@@ -50,6 +51,13 @@ public class MovieServiceShould {
 
         Collection<Movie> movies = movieService.findMoviesByLength(119);
         assertThat(getMovieIds(movies), CoreMatchers.is(Arrays.asList(2, 3, 4, 5, 6)) );
+    }
+
+    @Test
+    public void return_movies_by_name() {
+
+        Collection<Movie> movies = movieService.findMoviesByName("Super");
+        assertThat(getMovieIds(movies), CoreMatchers.is(Arrays.asList(4, 8)) );
     }
 
     private List<Integer> getMovieIds(Collection<Movie> movies) {
