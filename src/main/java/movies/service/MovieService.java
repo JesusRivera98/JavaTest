@@ -31,4 +31,20 @@ public class MovieService {
         return movieRepository.findAll().stream()
                 .filter(movie -> movie.getName().contains(name)).collect(Collectors.toList());
     }
+
+    public Collection<Movie> findMoviesByTemplate(Movie template) {
+        if (template.getMinutes() < 0) {
+            throw new IllegalArgumentException("Not a valid length");
+        }
+        return movieRepository.findAll().stream()
+                .filter(movie -> {
+                    if (template.getId() == movie.getId()) {
+                        return true;
+                    }
+                    return (template.getName() == null || movie.getName().contains(template.getName())) &&
+                            (template.getMinutes() == null || movie.getMinutes() <= template.getMinutes()) &&
+                            (template.getGenre() == null || movie.getGenre() == template.getGenre());
+
+                }).collect(Collectors.toList());
+    }
 }

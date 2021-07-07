@@ -60,6 +60,18 @@ public class MovieServiceShould {
         assertThat(getMovieIds(movies), CoreMatchers.is(Arrays.asList(4, 8)) );
     }
 
+    @Test
+    public void return_movies() {
+
+        String name = null; // we don't want to search by name
+        Integer minutes = 150; // 2h 30m
+        Genre genre = Genre.ACTION;
+        Movie template = new Movie(name, minutes, genre);
+        Collection<Movie> movies =
+                movieService.findMoviesByTemplate(template);
+        assertThat(getMovieIds(movies), CoreMatchers.is(Arrays.asList(7)) );
+    }
+
     private List<Integer> getMovieIds(Collection<Movie> movies) {
         return movies.stream().map(Movie::getId).collect(Collectors.toList());
     }

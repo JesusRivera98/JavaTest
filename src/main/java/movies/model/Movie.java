@@ -5,7 +5,7 @@ import java.util.Objects;
 public class Movie {
     private Integer id;
     private String name;
-    private int minutes;
+    private Integer minutes;
     private Genre genre;
 
     public Movie(String name, int minutes, Genre genre) {
@@ -27,7 +27,7 @@ public class Movie {
         return name;
     }
 
-    public int getMinutes() {
+    public Integer getMinutes() {
         return minutes;
     }
 
