@@ -1,3 +1,5 @@
+package player;
+
 public class Player {
     private Dice dice;
     private int minNumberToWin;

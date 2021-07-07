@@ -1,5 +1,7 @@
 import org.junit.Test;
 import org.mockito.Mockito;
+import player.Dice;
+import player.Player;
 
 import static org.junit.Assert.*;
 

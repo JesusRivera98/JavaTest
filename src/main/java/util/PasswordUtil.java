@@ -1,3 +1,5 @@
+package util;
+
 public class PasswordUtil {
     public enum SecurityLevel{
         WEAK, MEDIUM, STRONG
