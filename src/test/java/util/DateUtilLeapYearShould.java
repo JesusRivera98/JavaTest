@@ -21,4 +21,11 @@ public class DateUtilLeapYearShould {
         assertThat(DateUtil.isLeapYear(2000), is(true));
         assertThat(DateUtil.isLeapYear(2400), is(true));
     }
+
+    @Test
+    public void return_false_when_year_is_divisible_by_100_but_not_by_400(){
+        assertThat(DateUtil.isLeapYear(1700), is(false));
+        assertThat(DateUtil.isLeapYear(1800), is(false));
+        assertThat(DateUtil.isLeapYear(1900), is(false));
+    }
 }
