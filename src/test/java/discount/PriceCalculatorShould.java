@@ -21,6 +21,6 @@ public class PriceCalculatorShould {
         calculator.addPrice(10.2);
         calculator.addPrice(15.5);
 
-        assertThat(calculator.getTotal(), is(0.0));
+        assertThat(calculator.getTotal(), is(25.7));
     }
 }
