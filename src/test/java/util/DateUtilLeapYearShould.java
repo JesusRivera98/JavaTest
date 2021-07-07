@@ -28,4 +28,11 @@ public class DateUtilLeapYearShould {
         assertThat(DateUtil.isLeapYear(1800), is(false));
         assertThat(DateUtil.isLeapYear(1900), is(false));
     }
+
+    @Test
+    public void return_true_when_year_is_divisible_by_4_but_not_by_100(){
+        assertThat(DateUtil.isLeapYear(1996), is(true));
+        assertThat(DateUtil.isLeapYear(2004), is(true));
+        assertThat(DateUtil.isLeapYear(2008), is(true));
+    }
 }
