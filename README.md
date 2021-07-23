@@ -1,5 +1,5 @@
 # JavaTest
-This repo is from Platzi's course "Testing en Java"(https://platzi.com/clases/testing-java/)
+This repo is from Platzi's course ["Testing en Java"](https://platzi.com/clases/testing-java/)
 
 ## Table of contents
 * [General info](#general-info)
